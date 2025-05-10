@@ -1,54 +1,83 @@
-# React + TypeScript + Vite
+# Aplicación Educativa de React Hooks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación interactiva diseñada para aprender y experimentar con diversos Hooks de React. La aplicación está construida con React, TypeScript y Vite, utilizando React Router para la navegación.
 
-Currently, two official plugins are available:
+## Descripción del Proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+La aplicación presenta una interfaz con una barra lateral de navegación (sidebar) que permite seleccionar diferentes ejemplos de Hooks. El área de contenido principal muestra la implementación y el comportamiento del Hook seleccionado, permitiendo a los usuarios interactuar y entender su funcionamiento.
 
-## Expanding the ESLint configuration
+## Tecnologías Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React:** Biblioteca principal para construir la interfaz de usuario.
+- **TypeScript:** Para un desarrollo más robusto y tipado estático.
+- **Vite:** Herramienta de frontend para un desarrollo rápido y eficiente.
+- **React Router:** Para la gestión de rutas y navegación dentro de la aplicación.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Hooks Cubiertos (Ejemplos)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Este proyecto cubre una variedad de Hooks de React, incluyendo pero no limitado a:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `useState`
+- `useEffect`
+- `useContext`
+- `useReducer`
+- `useCallback`
+- `useMemo`
+- `useRef`
+- Hooks personalizados
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Estructura del Proyecto
+
+- **Barra Lateral (Sidebar):** Contiene enlaces a los diferentes ejemplos de Hooks.
+- **Área de Contenido:** Muestra el componente específico del Hook seleccionado, con explicaciones y ejemplos interactivos.
+
+## Cómo Empezar
+
+Sigue estos pasos para ejecutar el proyecto en tu entorno local:
+
+1.  **Clona el repositorio (si aplica):**
+
+    ```bash
+    git clone <URL_DEL_REPOSITORIO>
+    cd react-hooks
+    ```
+
+2.  **Instala las dependencias:**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Inicia el servidor de desarrollo:**
+
+    ```bash
+    npm run dev
+    ```
+
+    Esto iniciará la aplicación en modo de desarrollo. Abre tu navegador y visita `http://localhost:5173` (o el puerto que indique Vite).
+
+4.  **Construye para producción:**
+
+    ```bash
+    npm run build
+    ```
+
+    Esto generará los archivos optimizados para producción en la carpeta `dist`.
+
+5.  **Linting:**
+
+    ```bash
+    npm run lint
+    ```
+
+    Ejecuta ESLint para verificar el estilo y la calidad del código.
+
+6.  **Vista previa de la build:**
+    ```bash
+    npm run preview
+    ```
+    Este comando permite previsualizar la build de producción localmente.
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Si deseas mejorar este proyecto, por favor, abre un issue o envía un pull request.
